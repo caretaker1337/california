@@ -1,0 +1,68 @@
+[
+  {
+    "id": "footer-products-0",
+    "title": "All products",
+    "items": [
+      {
+        "title": "Phones"
+      },
+      {
+        "title": "Watch"
+      },
+      {
+        "title": "Tablet"
+      },
+      {
+        "title": "Laptops"
+      }
+    ]
+  },
+  {
+    "id": "footer-products-2",
+    "title": "Company",
+    "items": [
+      {
+        "title": "About"
+      },
+      {
+        "title": "Support"
+      }
+    ]
+  },
+  {
+    "id": "footer-products-3",
+    "title": "Support",
+    "items": [
+      {
+        "title": "Style Guide"
+      },
+      {
+        "title": "Licensing"
+      },
+      {
+        "title": "Change Log"
+      },
+      {
+        "title": "Contact"
+      }
+    ]
+  },
+  {
+    "id": "footer-products-4",
+    "title": "Follow Us",
+    "items": [
+      {
+        "title": "Instagram"
+      },
+      {
+        "title": "Facebook"
+      },
+      {
+        "title": "LinkedIn"
+      },
+      {
+        "title": "YouTube"
+      }
+    ]
+  }
+]

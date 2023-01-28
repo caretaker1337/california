@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "imageURL": "around_img1.png",
+    "text": "Latest and gratest",
+    "title": "Smart light bulb pack"
+  },
+  {
+    "id": 2,
+    "imageURL": "around_img2.png",
+    "text": "Best selling",
+    "title": "Smart light bulb pack"
+  },
+  {
+    "id": 3,
+    "imageURL": "around_img3.png",
+    "text": "Every product",
+    "title": "Smart light bulb pack"
+  }
+]

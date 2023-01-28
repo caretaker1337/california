@@ -1,0 +1,20 @@
+[
+  {
+    "id": "category-1",
+    "imageURL": "category_img.png",
+    "subtitle": "Smart light bulb pack",
+    "title": "Latest and gratest"
+  },
+  {
+    "id": "category-2",
+    "imageURL": "category_img2.png",
+    "subtitle": "Smart light bulb pack",
+    "title": "Best selling"
+  },
+  {
+    "id": "category-3",
+    "imageURL": "category_img3.png",
+    "subtitle": "Smart light bulb pack",
+    "title": "Every product"
+  }
+]

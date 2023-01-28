@@ -1,0 +1,20 @@
+[
+  {
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque in est dui, aliquam, tempor. Faucibus morbi turpis.",
+    "id": "slide-1",
+    "imageURL": "slider_img.png",
+    "title": "The new phones are here take a look."
+  },
+  {
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque in est dui, aliquam, tempor. Faucibus morbi turpis.",
+    "id": "slide-2",
+    "imageURL": "slider_img.png",
+    "title": "The new phones are here take a look."
+  },
+  {
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque in est dui, aliquam, tempor. Faucibus morbi turpis.",
+    "id": "slide-3",
+    "imageURL": "slider_img.png",
+    "title": "The new phones are here take a look."
+  }
+]
