@@ -26,5 +26,33 @@
     "imageURL": "item_img4.jpg",
     "name": "iPad",
     "price": 610
+  },
+  {
+    "description": "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet",
+    "id": "product-5",
+    "imageURL": "item_img1.jpg",
+    "name": "MacBook Pro 13",
+    "price": 1800
+  },
+  {
+    "description": "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
+    "id": "product-6",
+    "imageURL": "item_img2.jpg",
+    "name": "Smart Galaxy Watch 3",
+    "price": 599
+  },
+  {
+    "description": "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
+    "id": "product-7",
+    "imageURL": "item_img3.jpg",
+    "name": "MacBook Air M1",
+    "price": 1349
+  },
+  {
+    "description": "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
+    "id": "product-8",
+    "imageURL": "item_img4.jpg",
+    "name": "iPad",
+    "price": 849
   }
 ]

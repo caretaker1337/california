@@ -4,6 +4,7 @@ export const StyledWrapper = styled("div")(({ theme: { devices } }) => ({
   flex: "0 1 25%",
   width: "25%",
 
+
   [devices["mobile"]]: {
     width: "100%",
   },

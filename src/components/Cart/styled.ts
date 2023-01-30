@@ -6,16 +6,19 @@ export const StyledWrapper = styled("div")(({ theme: { rem, devices } }) => ({
   border: `${rem(2)} solid black`,
   marginBottom: rem(30),
 
-
   [devices["mobile"]]: {
-    width: "100%", 
+    width: "100%",
   },
 }));
 
-export const StyledList = styled("ul")(({ theme: { rem } }) => ({
+export const StyledList = styled("ul")(({ theme: { devices, rem } }) => ({
   display: "flex",
   gap: rem(30),
+  // flexWrap:"wrap",
 
+  [devices["mobile"]]: {
+    flexDirection: "column",
+  },
 }));
 
 export const StyledText = styled("ul")(({ theme: { rem } }) => ({
@@ -24,5 +27,3 @@ export const StyledText = styled("ul")(({ theme: { rem } }) => ({
   textAlign: "center",
   paddingTop: rem(200),
 }));
-
-
