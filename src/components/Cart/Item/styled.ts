@@ -79,7 +79,7 @@ export const StyledButton = styled("button")(({ theme: { devices, rem } }) => ({
   transitionDuration: "0.2s",
   transitionProperty: "background-color, color",
   transitionTimingFunction: "ease-in",
-  marginRight: rem(2),
+  marginRight: rem(20),
 
   ":hover": {
     backgroundColor: "black",

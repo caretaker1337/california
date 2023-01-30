@@ -1,13 +1,11 @@
 import React from "react";
 
+import { TProduct } from "~/components/Products/Item/types";
+
 export enum TActionTypes {
   DEFAULT = "DEFAULT",
-  SET_PRODUCT = "SET_PRODUCT",
-}
-
-export interface TProduct {
-  name: string;
-  price: number;
+  ADD_TO_CART = "ADD_TO_CART",
+  REMOVE_FROM_CART = "REMOVE_FROM_CART",
 }
 
 export interface TStore {

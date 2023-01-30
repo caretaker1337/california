@@ -9,12 +9,14 @@ import {
   Ideas,
   Search,
   Subscribe,
+  Cart,
 } from "~/components";
 import { StyledWrapper } from "./styled";
 
 const Layout: React.FC = () => (
   <StyledWrapper>
     <Header />
+    <Cart />
     <Slider />
     <Media />
     <Products />

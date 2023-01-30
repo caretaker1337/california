@@ -88,6 +88,10 @@ export const StyledContentMenuList = styled("ul")({});
 
 export const StyledContentMenuItem = styled("li")(({ theme: { rem } }) => ({
   marginBottom: rem(15),
+
+  ":hover": {
+    opacity: 0.7,
+  },
 }));
 
 export const StyledContentMenuLink = styled("a")({

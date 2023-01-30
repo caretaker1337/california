@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 
-import { TProps } from "./types";
+import { TProps } from "~/components/Products/Item/types";
 import {
   StyledWrapper,
   StyledName,
@@ -12,14 +12,14 @@ import {
   StyledButton,
   StyledBox,
 } from "./styled";
-import { addToCart, AppContext } from "~/store";
+import { removeFromCart, AppContext } from "~/store";
 
 const Item: React.FC<TProps> = (product) => {
   const { dispatch } = useContext(AppContext);
   const { imageURL, name, description, price } = product;
 
   const handleAddProduct = (): void => {
-    dispatch(addToCart(product));
+    dispatch(removeFromCart(product));
   };
 
   return (
@@ -35,7 +35,7 @@ const Item: React.FC<TProps> = (product) => {
       <StyledBox>
         <StyledPrice>$ {price} USD</StyledPrice>
         <StyledButton type="button" onClick={handleAddProduct}>
-          Add to cart
+          Remove
         </StyledButton>
       </StyledBox>
     </StyledWrapper>

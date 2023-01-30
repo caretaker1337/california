@@ -10,3 +10,4 @@ export { Products } from "./Products";
 export { Search } from "./Search";
 export { Slider } from "./Slider";
 export { Subscribe } from "./Subscribe";
+export { Cart } from "./Cart";

@@ -29,8 +29,8 @@ const Menu: React.FC<TProps> = ({ isOpened }) => (
     {items && !!items.length && (
       <StyledList>
         {items.map(
-          ({ text }: TMenuItem): React.ReactElement => (
-            <Item text={text} />
+          ({ id, text }: TMenuItem): React.ReactElement => (
+            <Item key={id} text={text} />
           )
         )}
       </StyledList>
