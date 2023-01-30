@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 
 import { AppContext } from "~/store";
 import { Item } from "./Item";
-import { StyledList, StyledWrapper } from "./styled";
+import { StyledList, StyledText, StyledWrapper } from "./styled";
 
 const Cart: React.FC = () => {
   const { store } = useContext(AppContext);
@@ -19,7 +19,7 @@ const Cart: React.FC = () => {
           )}
         </StyledList>
       ) : (
-        <p>Cart is empty.</p>
+        <StyledText>Cart is empty.</StyledText>
       )}
     </StyledWrapper>
   );

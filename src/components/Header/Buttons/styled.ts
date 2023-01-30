@@ -14,6 +14,10 @@ export const StyledButton = styled("button")(({ theme: { rem } }) => ({
   },
 }));
 
+export const StyledLink = styled("a")({
+  
+});
+
 export const StyledBurgerLine = styled("span")(({ theme: { rem } }) => ({
   backgroundColor: "black",
   borderRadius: rem(10),

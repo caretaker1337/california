@@ -1,13 +1,9 @@
 import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
 
 import { HeaderSearchSvg, HeaderCartSvg } from "~/icons";
 import { TProps } from "./types";
-import {
-  StyledButton,
-  StyledWrapper,
-  StyledBurger,
-  StyledBurgerLine,
-} from "./styled";
+import { StyledButton, StyledWrapper, StyledBurger, StyledBurgerLine, StyledLink } from "./styled";
 
 const Buttons: React.FC<TProps> = ({ onMenuToggle }) => {
   const [menuIsOpened, toggleMenu] = useState<boolean>(false);
@@ -20,11 +16,15 @@ const Buttons: React.FC<TProps> = ({ onMenuToggle }) => {
   return (
     <StyledWrapper>
       <StyledButton type="button">
-        <HeaderSearchSvg />
+        <StyledLink href="/">
+          <HeaderSearchSvg />
+        </StyledLink>
       </StyledButton>
 
       <StyledButton type="button">
-        <HeaderCartSvg />
+        <NavLink to="/cart">
+          <HeaderCartSvg />
+        </NavLink>
       </StyledButton>
 
       <StyledBurger isOpened={menuIsOpened} onClick={handleMenuToggle} type="button">

@@ -1,8 +1,8 @@
 import React from "react";
+import { Route, Routes } from "react-router";
 
 import {
   Categories,
-  Header,
   Slider,
   Media,
   Products,
@@ -15,15 +15,24 @@ import { StyledWrapper } from "./styled";
 
 const Layout: React.FC = () => (
   <StyledWrapper>
-    <Header />
-    <Cart />
-    <Slider />
-    <Media />
-    <Products />
-    <Categories />
-    <Ideas />
-    <Search />
-    <Subscribe />
+    <Routes>
+      <Route
+        path="/"
+        element={
+          <>
+            <Slider />
+            <Media />
+            <Products />
+            <Categories />
+            <Ideas />
+            <Search />
+            <Subscribe />
+          </>
+        }
+      />
+
+      <Route path="/cart" element={<Cart />} />
+    </Routes>
   </StyledWrapper>
 );
 
