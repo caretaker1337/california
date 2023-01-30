@@ -8,7 +8,7 @@ export const StyledWrapper = styled("div")(({ theme: { rem, devices } }) => ({
 
 
   [devices["mobile"]]: {
-    width: "100%",
+    width: "100%", 
   },
 }));
 
