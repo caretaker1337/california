@@ -2,6 +2,7 @@ import React, { useCallback, useEffect, useState } from "react";
 
 import { Loader } from "~/components";
 import { Heading } from "~/theme/components";
+import { THint } from "./types";
 import { SearchSvg } from "~/icons";
 import {
   StyledWrapper,
@@ -15,15 +16,15 @@ import {
 } from "./styled";
 
 const Search: React.FC = () => {
-  const [hints, setHints] = useState<string[]>([]);
-  const [selectedHints, setSelectedHints] = useState<string[]>([]);
+  const [hints, setHints] = useState<THint[]>([]);
+  const [selectedHints, setSelectedHints] = useState<THint[]>([]);
   const [hintsLoading, toggleHintsLoading] = useState<boolean>(true);
   const [inputValue, setInputValue] = useState<string>("");
 
   const getHints = (): void => {
     fetch(`data/hints.json`)
       .then((response: Response) => response.json())
-      .then((data: string[]): void => {
+      .then((data: THint[]): void => {
         setHints(data);
       })
       .catch((): void => {
@@ -34,6 +35,10 @@ const Search: React.FC = () => {
       });
   };
 
+  const checkActiveHint = (hint: THint): boolean => {
+    return selectedHints.some(({ key }) => key === hint.key);
+  };
+
   const handleInputValue = ({ currentTarget }: React.SyntheticEvent<HTMLInputElement>): void => {
     const { value } = currentTarget;
 
@@ -42,25 +47,27 @@ const Search: React.FC = () => {
 
   const handleSearchClear = (): void => {
     setInputValue("");
+    setSelectedHints([]);
   };
 
-  const handleHintClick = useCallback(
-    ({ currentTarget }: React.SyntheticEvent<HTMLButtonElement>): void => {
-      const { value } = currentTarget;
+  const handleHintToggle = useCallback((hint: THint): void => {
+    setSelectedHints((prevHints: THint[]): THint[] => {
+      const newHints = [...prevHints];
 
-      setSelectedHints((prevHints: string[]): string[] => {
-        if (prevHints.includes(value)) return prevHints;
+      if (newHints.find(({ key }: THint): boolean => key === hint.key)) {
+        return newHints.filter(({ key }: THint): boolean => key !== hint.key);
+      }
 
-        return [...prevHints, value];
-      });
-    },
-    []
-  );
+      return [...newHints, hint];
+    });
+  }, []);
 
   useEffect((): void => {
-    const hintsValue = selectedHints.join(" ");
+    setInputValue((): string => {
+      const selectedValue: string = selectedHints.map(({ text }: THint): string => text).join(" ");
 
-    setInputValue(hintsValue);
+      return selectedValue;
+    });
   }, [selectedHints]);
 
   useEffect((): void => {
@@ -83,7 +90,7 @@ const Search: React.FC = () => {
           <SearchSvg />
         </StyledButton>
 
-        { inputValue && (
+        {inputValue && (
           <StyledClear type="button" onClick={handleSearchClear}>
             X
           </StyledClear>
@@ -93,19 +100,20 @@ const Search: React.FC = () => {
       <StyledHints>
         {hints && !!hints.length && (
           <StyledHintsList>
-            {hints.map(
-              (hint: string, index: number): React.ReactElement => (
-                <li key={`${hint}-${index}`}>
+            {hints.map((hint: THint, index: number): React.ReactElement => {
+              const { key, text } = hint;
+
+              return (
+                <li key={`${key}-${index}`}>
                   <StyledHintsButton
-                    isActive={selectedHints.includes(hint)}
-                    onClick={handleHintClick}
-                    value={hint}
+                    isActive={checkActiveHint(hint)}
+                    onClick={(): void => handleHintToggle(hint)}
                   >
-                    {hint}
+                    {text}
                   </StyledHintsButton>
                 </li>
-              )
-            )}
+              );
+            })}
           </StyledHintsList>
         )}
 

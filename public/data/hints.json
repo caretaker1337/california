@@ -1,11 +1,38 @@
 [
-  "iPhone",
-  "Charger",
-  "Gift",
-  "Google Pixel 3",
-  "Keyboard",
-  "13 Pro Max",
-  "iPhone 12",
-  "Laptop",
-  "Mobile"
+  {
+    "key": "iphone",
+    "text": "iPhone"
+  },
+  {
+    "key": "charger",
+    "text": "Charger"
+  },
+  {
+    "key": "gift",
+    "text": "Gift"
+  },
+  {
+    "key": "pixel",
+    "text": "Google Pixel 3"
+  },
+  {
+    "key": "keyboard",
+    "text": "Keyboard"
+  },
+  {
+    "key": "iphone13",
+    "text": "13 Pro Max"
+  },
+  {
+    "key": "iphone12",
+    "text": "iPhone 12"
+  },
+  {
+    "key": "laptop",
+    "text": "Laptop"
+  },
+  {
+    "key": "mobile",
+    "text": "Mobile"
+  }
 ]

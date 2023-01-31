@@ -1,11 +1,16 @@
 import { styled } from "~/theme";
 
-export const StyledWrapper = styled("div")(({ theme: { devices } }) => ({
-  flex: "0 1 25%",
-  width: "25%",
+export const StyledWrapper = styled("div")(({ theme: { devices, rem } }) => ({
+  flex: `0 1 calc(25% - ${rem(30)})`,
+  width: `calc(25% - ${rem(30)})`,
 
+  [devices["tablet"]]: {
+    flex: `0 1 calc(33% - ${rem(30)})`,
+    width: `calc(33% - ${rem(30)})`,
+  },
 
   [devices["mobile"]]: {
+    flex: "none",
     width: "100%",
   },
 }));

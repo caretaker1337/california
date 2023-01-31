@@ -18,7 +18,7 @@ export const StyledList = styled("ul")(({ theme: { devices, rem } }) => ({
   display: "flex",
   gap: rem(30),
   flexWrap: "wrap",
-  justifyContent: "space-around",
+  justifyContent: "space-between",
 
   [devices["mobile"]]: {
     flexDirection: "column",
