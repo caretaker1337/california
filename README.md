@@ -13,8 +13,8 @@
 
 <h2>Features:</h2>
   - Slider using Swiper <br>
-  - Search + hint buttons
-  - Cqrt + price calculation
+  - Search + hint buttons <br>
+  - Cqrt + price calculation <br>
   - Router between main page and cart <br>
 
 <h2>Execution:</h2>
