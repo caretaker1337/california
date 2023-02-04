@@ -1,5 +1,5 @@
 <h1>Project description:</h1>
-  Online store. Next features/abilities are implemented: <br>
+  Online store. Based on free design from Figma. Next features/abilities are implemented: <br>
  - Slider <br>
  - Search <br>
  - Sign Up <br>
