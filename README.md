@@ -1,8 +1,8 @@
 <h1>Project description:</h1>
   Online store. Based on free design from Figma. Next features/abilities are implemented: <br>
+ - Redux approach React hooks implementation <br>
  - Slider <br>
  - Search <br>
- - Sign Up <br>
  - List of products to buy <br>
  - Cart <br>
 
