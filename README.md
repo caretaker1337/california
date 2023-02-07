@@ -7,9 +7,9 @@
  - Cart <br>
 
 <h2>Technologies:</h2>
-  - React JS <br>
+  - ReactJS <br>
   - TypeScript <br>
-  - StyledComponent <br>
+  - StyledComponents <br>
 
 <h2>Features:</h2>
   - Slider using Swiper <br>
